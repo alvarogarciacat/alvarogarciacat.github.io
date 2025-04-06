@@ -24,14 +24,14 @@ header p {
   font-size: 0.9em;
 }
 
-/* Menú de navegación vertical en la parte izquierda */
+/* Menú de navegación vertical (por defecto escritorio) */
 nav {
   float: left;
   width: 200px;
   background-color: #0066cc;
   padding: 20px;
   box-sizing: border-box;
-  min-height: calc(100vh - 50px);  /* Altura mínima de la ventana menos el header */
+  min-height: calc(100vh - 50px);
 }
 
 nav ul {
@@ -60,7 +60,7 @@ nav ul li a:focus {
 
 /* CONTENIDO PRINCIPAL */
 section {
-  margin: 20px 20px 20px 240px; /* Deja espacio para el menú vertical */
+  margin: 20px 20px 20px 240px;
   padding: 20px;
   background-color: #fff;
   border-radius: 4px;
@@ -142,6 +142,7 @@ form button:hover {
   background-color: #003366;
 }
 
+/* FOOTER */
 footer {
   clear: both;
   text-align: center;
@@ -173,4 +174,65 @@ a:hover {
   text-decoration: underline;
 }
 
+/* AJUSTES RESPONSIVE */
+
+/* Ajustes generales para multimedia responsive */
+img, video, audio {
+  max-width: 100%;
+  height: auto;
+}
+
+/* TABLET (menos de 768px) */
+@media screen and (max-width: 768px) {
+  nav {
+    float: none;
+    width: 100%;
+    min-height: auto;
+    padding: 10px;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav ul li {
+    margin-bottom: 5px;
+  }
+
+  section {
+    margin: 10px;
+  }
+}
+
+/* MÓVIL (menos de 480px) */
+@media screen and (max-width: 480px) {
+  header {
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    text-align: center;
+  }
+
+  section {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 5px;
+  }
+}
 
