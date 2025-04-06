@@ -176,7 +176,7 @@ a:hover {
 
 /* AJUSTES RESPONSIVE */
 
-/* Ajustes generales para multimedia responsive */
+/* GENERALES RESPONSIVE */
 img, video, audio {
   max-width: 100%;
   height: auto;
@@ -235,6 +235,3 @@ img, video, audio {
     padding: 5px;
   }
 }
-
-
-
